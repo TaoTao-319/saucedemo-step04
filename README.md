@@ -39,16 +39,16 @@
 
 | 资料名称 | 文件或链接 | 是否已检查 | 需要处理的事项 |
 |----|----|----|----|
-| 测试范围 | [test-scope.md](docs/history/step01/test-scope.md) | 是 | 作为基础范围；与后续用户故事和测试计划保持一致。 |
-| 测试用例 | [test-cases.md](docs/test-cases.md)；对照 [历史用例](docs/history/step02/test-cases.md) | 是 | 以 20 条用例作为当前主版本，保留历史版本用于核对。 |
-| 测试执行记录 | [execution-notes.md](docs/history/step01/execution-notes.md) | 是 | 核对 19 条用例、16 Pass、3 Fail、0 Blocked 的原始记录。 |
-| 测试总结 | [summary.md](docs/summary.md)；对照 [历史总结](docs/history/step02/test-summary.md) | 是 | 统一测试数量、缺陷状态和最终质量结论。 |
-| 用户故事 | [stories.md](docs/stories.md) | 是 | 核对 4 个用户故事及其关联用例。 |
-| 验收标准 | [stories.md](docs/stories.md) | 是 | 核对 18 个验收标准，补齐追踪矩阵中的空缺。 |
-| 追踪矩阵 | [trace.md](docs/trace.md) | 是 | 补齐测试用例与验收标准的对应关系。 |
-| 缺陷记录 | [bug-flow.md](docs/bug-flow.md)；[历史缺陷记录](docs/history/step02/bug-reports.md) | 是 | 统一缺陷编号、测试账号、缺陷现象、状态和证据。 |
-| 回归记录 | [regression.md](docs/regression.md) | 是 | 核对 8 条 P0、3 条 P1 回归用例及其结果。 |
-| 截图和其他证据 | [BUG-001.png](evidence/BUG-001.png)、[BUG-002.png](evidence/BUG-002.png)、[BUG-003.png](evidence/BUG-003.png) | 是 | 确认截图与缺陷编号、复现步骤和测试账号对应。 |
+| 测试范围 | [plan.md](plan.md) | 是 | 使用当前测试计划中的范围说明。 |
+| 测试用例 | [test-cases.md](test-cases.md) | 是 | 当前主版本包含 20 条测试用例及执行结果。 |
+| 测试执行记录 | [test-cases.md](test-cases.md) | 是 | 测试用例文件同时记录实际结果和状态。 |
+| 测试总结 | [summary.md](summary.md) | 是 | 记录测试数量、缺陷状态和最终质量结论。 |
+| 用户故事 | [stories.md](stories.md) | 是 | 核对用户故事及其关联用例。 |
+| 验收标准 | [stories.md](stories.md) | 是 | 验收标准与用户故事记录在同一文件中。 |
+| 追踪矩阵 | [trace.md](trace.md) | 是 | 记录用户故事、验收标准、测试用例和缺陷之间的关系。 |
+| 缺陷记录 | [bug-flow.md](bug-flow.md) | 是 | 记录缺陷状态、流转和协作信息。 |
+| 回归记录 | [regression.md](regression.md) | 是 | 核对 P0 和 P1 回归用例及其结果。 |
+| 截图和其他证据 | [BUG-001.png](BUG-001.png)、[BUG-002.png](BUG-002.png)、[BUG-003.png](BUG-003.png) | 是 | 确认截图与缺陷编号、复现步骤和测试账号对应。 |
 
 ## 四 测试数据一致性检查
 
@@ -75,7 +75,7 @@
 
 ### 4.3 统计口径说明
 
-项目以 [docs/test-cases.md](docs/test-cases.md) 中的 20 条用例作为当前主版本；Step01 的 19 条用例和 Step02 的 20 条用例作为历史记录，用于核对数量、状态和缺陷变化。
+项目以 [test-cases.md](test-cases.md) 中的 20 条用例作为当前主版本，并根据测试总结、缺陷记录和回归记录统一测试结果。
 
 BUG-001、BUG-002 和 BUG-003 同时出现在测试执行记录和探索性测试记录中，但不同文件对账号和现象的描述不完全一致。TC-012 和 TC-020 的实际结果与预期结果不一致，应暂记为 Fail；缺陷账号、复现稳定性和证据需要再次确认。
 
@@ -110,7 +110,7 @@ BUG-001、BUG-002 和 BUG-003 同时出现在测试执行记录和探索性测�
 | 复现结论 | Need More Evidence |
 | 严重程度 | Medium |
 | 优先级 | P1 或 P2，需结合影响范围统一 |
-| 证据文件 | [BUG-001.png](evidence/BUG-001.png) |
+| 证据文件 | [BUG-001.png](BUG-001.png) |
 | GitHub Issue | [BUG-001](https://github.com/TaoTao-319/saucedemo-step04/issues/1) |
 
 ### 5.3 BUG-002 确认记录
@@ -129,7 +129,7 @@ BUG-001、BUG-002 和 BUG-003 同时出现在测试执行记录和探索性测�
 | 复现结论 | Need More Evidence |
 | 严重程度 | Medium 或 High，需结合是否影响购买对象统一 |
 | 优先级 | P1 或 P2，需结合影响范围统一 |
-| 证据文件 | [BUG-002.png](evidence/BUG-002.png) |
+| 证据文件 | [BUG-002.png](BUG-002.png) |
 | GitHub Issue | [BUG-002](https://github.com/TaoTao-319/saucedemo-step04/issues/2) |
 
 ### 5.4 BUG-003 确认记录
@@ -149,7 +149,7 @@ BUG-001、BUG-002 和 BUG-003 同时出现在测试执行记录和探索性测�
 | 复现结论 | Need More Evidence |
 | 严重程度 | High 或 Medium，需结合是否阻断订单流程统一 |
 | 优先级 | P0 或 P1，需结合核心流程影响统一 |
-| 证据文件 | [BUG-003.png](evidence/BUG-003.png) |
+| 证据文件 | [BUG-003.png](BUG-003.png) |
 | GitHub Issue | [BUG-003](https://github.com/TaoTao-319/saucedemo-step04/issues/3) |
 
 ## 六 需求追踪补充
@@ -225,9 +225,9 @@ Step03 记录中仍需补齐验收标准关联的用例为 TC-007、TC-008、TC-
 
 | 回归编号 | 回归目标 | 关联缺陷 | 执行账号 | 实际结果 | 状态 | 证据 |
 |----|----|----|----|----|----|----|
-| REG-009 | 商品图片和名称对应 | BUG-001 | visual_user 或 problem_user，需确认 | 历史记录显示商品信息不一致 | 待修复或确认后复测 | Step01 或 Step03 BUG-001.png |
-| REG-010 | 商品详情与列表信息对应 | BUG-002 | visual_user 或 problem_user，需确认 | 历史记录显示详情信息不一致 | 待修复或确认后复测 | Step01 或 Step03 BUG-002.png |
-| REG-011 | 不同账号购物流程结果一致 | BUG-003 | standard_user 与 problem_user | 历史记录显示流程结果不一致 | 待确认后复测 | Step01 或 Step03 BUG-003.png |
+| REG-009 | 商品图片和名称对应 | BUG-001 | visual_user 或 problem_user，需确认 | 历史记录显示商品信息不一致 | 待修复或确认后复测 | [BUG-001.png](BUG-001.png) |
+| REG-010 | 商品详情与列表信息对应 | BUG-002 | visual_user 或 problem_user，需确认 | 历史记录显示详情信息不一致 | 待修复或确认后复测 | [BUG-002.png](BUG-002.png) |
+| REG-011 | 不同账号购物流程结果一致 | BUG-003 | standard_user 与 problem_user | 历史记录显示流程结果不一致 | 待确认后复测 | [BUG-003.png](BUG-003.png) |
 
 | 风险编号 | 风险描述 | 影响 | 优先级 | 应对措施 | 状态 |
 |----|----|----|----|----|----|
